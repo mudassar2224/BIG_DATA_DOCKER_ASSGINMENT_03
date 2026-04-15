@@ -150,6 +150,8 @@ master/results/sentiment_results.json
 📸 You can also add:
 
 * Docker running containers screenshot
+* <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/6367dc82-37e7-4320-bd69-5c4f6b8232af" />
+
   
 
 * 
