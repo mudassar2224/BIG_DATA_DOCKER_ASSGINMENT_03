@@ -150,8 +150,17 @@ master/results/sentiment_results.json
 📸 You can also add:
 
 * Docker running containers screenshot
+  
+
+* 
+
 * Terminal output
-* Worker logs
+* <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/f81fb4bc-47ee-41f7-9417-8671c7773f19" />
+
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/2c1033b0-5345-4c30-9fe0-6d5879517237" />
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/303520d8-85c9-4978-b98a-a382ca7482d9" />
+
+
 
 ---
 
@@ -199,38 +208,4 @@ It showcases real-world concepts like:
 
 ---
 
-# 🖼️ **How to Add More Images**
-
-## 🔹 Step 1:
-
-Create folder:
-
-```
-images/
-```
-
-## 🔹 Step 2:
-
-Add image in README:
-
-```markdown
-![My Image](images/output.png)
-```
-
----
-
-# 💯 **Pro Tips for Full Marks**
-
-✅ Add 2–3 screenshots 📸
-✅ Keep README clean & structured 🧼
-✅ Use headings + emojis 🎯
-✅ Show workflow clearly 🔄
-
----
-
-# 🔥 **Final Result**
-
-🎉 You built a **Distributed System using Docker with Fault Tolerance**
-👉 This is a **real-world industry-level concept** 💯
-
----
+#
