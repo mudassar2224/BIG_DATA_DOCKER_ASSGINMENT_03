@@ -1,0 +1,69 @@
+version: '3.8'
+
+services:
+  # Worker 1
+  worker1:
+    build:
+      context: .
+      dockerfile: Dockerfile.worker
+    container_name: sentiment_worker1
+    networks:
+      - sentiment_network
+    environment:
+      - WORKER_ID=1
+    ports:
+      - "5001:5000"
+    restart: on-failure
+
+  # Worker 2
+  worker2:
+    build:
+      context: .
+      dockerfile: Dockerfile.worker
+    container_name: sentiment_worker2
+    networks:
+      - sentiment_network
+    environment:
+      - WORKER_ID=2
+    ports:
+      - "5002:5000"
+    restart: on-failure
+
+  # Worker 3
+  worker3:
+    build:
+      context: .
+      dockerfile: Dockerfile.worker
+    container_name: sentiment_worker3
+    networks:
+      - sentiment_network
+    environment:
+      - WORKER_ID=3
+    ports:
+      - "5003:5000"
+    restart: on-failure
+
+  # Master (depends on workers)
+  master:
+    build:
+      context: .
+      dockerfile: Dockerfile.master
+    container_name: sentiment_master
+    networks:
+      - sentiment_network
+    depends_on:
+      - worker1
+      - worker2
+      - worker3
+    ports:
+      - "5000:5000"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./master/data:/app/data
+      - ./master/results:/app/results
+
+# Custom network for IP-based communication
+networks:
+  sentiment_network:
+    driver: bridge

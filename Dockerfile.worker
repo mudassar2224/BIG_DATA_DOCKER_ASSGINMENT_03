@@ -1,0 +1,16 @@
+FROM python:3.9-slim
+
+WORKDIR /app
+
+# Copy worker code
+COPY worker/worker.py .
+COPY worker/requirements.txt .
+
+# Install dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Expose port for requests
+EXPOSE 5000
+
+# Run worker
+CMD ["python", "worker.py"]
